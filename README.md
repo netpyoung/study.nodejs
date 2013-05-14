@@ -1,5 +1,8 @@
 study.nodejs
 ============
+
+날짜별 로그 : https://github.com/netpyoung/study.nodejs/tree/master/studylog
+
 생활코딩 : http://opentutorials.org/
 
 생활코딩-facebook : https://www.facebook.com/groups/codingeverybody/

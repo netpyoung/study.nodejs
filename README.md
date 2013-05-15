@@ -45,6 +45,7 @@ study.nodejs
  - NODE JS 노드제이에스 프로그래밍 - 에이콘
  - [nodebeginner]
  - [api:nodejs]
+ - [github:octoberskyjs]
 
 * 스터디방식
  - 참여형.(미리 준비 발표가 아닌, 주제를 정해놓고 다같이 실습 및 정보공유)
@@ -64,3 +65,4 @@ study.nodejs
 [wiki:Nodejs]: http://en.wikipedia.org/wiki/Nodejs
 [api:nodejs]: http://nodejs.org/docs/latest/api/
 [데렉 시버스: 운동이 시작되는 방법]: http://www.ted.com/talks/lang/ko/derek_sivers_how_to_start_a_movement.html
+[github:octoberskyjs]: https://github.com/octoberskyjs/home

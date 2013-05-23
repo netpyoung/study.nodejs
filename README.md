@@ -61,7 +61,7 @@ study.nodejs
 - 스터디했다는 증거(커지면 혹시 커뮤니티 지원받을 수 도 있을까봐.)
 - 최선을 다했다는 증거.:
 
-[모던 웹을 위한 Node.js 프로그래밍]: www.hanb.co.kr/book/look.html?isbn=978-89-7914-888-6
+[모던 웹을 위한 Node.js 프로그래밍]: http://www.hanb.co.kr/book/look.html?isbn=978-89-7914-888-6
 [src:모던 웹을 위한 Node.js 프로그래밍]: https://github.com/rintiantta/hanbit.modern.node
 [nodebeginner]: http://www.nodebeginner.org/
 [wiki:Nodejs]: http://en.wikipedia.org/wiki/Nodejs

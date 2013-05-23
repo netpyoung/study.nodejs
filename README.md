@@ -37,7 +37,8 @@ study.nodejs
  - 2차 목표: nodejs를 서버로하는 영화 예매 사이트 만들기. - db(mongo)도 붙여봤으면.
 
 * 스터디 매인 교제.
- - `모던 웹을 위한 Node.js 프로그래밍`.
+ - [모던 웹을 위한 Node.js 프로그래밍]
+ - [소스][src:모던 웹을 위한 Node.js 프로그래밍]
 
 * 레퍼런스
  - 자바스크립트 완벽가이드.
@@ -60,7 +61,8 @@ study.nodejs
 - 스터디했다는 증거(커지면 혹시 커뮤니티 지원받을 수 도 있을까봐.)
 - 최선을 다했다는 증거.:
 
-
+[모던 웹을 위한 Node.js 프로그래밍]: www.hanb.co.kr/book/look.html?isbn=978-89-7914-888-6
+[src:모던 웹을 위한 Node.js 프로그래밍]: https://github.com/rintiantta/hanbit.modern.node
 [nodebeginner]: http://www.nodebeginner.org/
 [wiki:Nodejs]: http://en.wikipedia.org/wiki/Nodejs
 [api:nodejs]: http://nodejs.org/docs/latest/api/

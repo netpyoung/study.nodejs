@@ -1,0 +1,15 @@
+!!! 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    #header
+      h1 Layout Page
+      h2 #{title}
+    #category
+      ul
+        li Alpha
+        li Beta
+        li Gamma
+    #content!= body

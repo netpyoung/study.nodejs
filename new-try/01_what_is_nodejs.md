@@ -1,7 +1,8 @@
 
 
 [생활코딩:node.js소개](http://opentutorials.org/course/86/650)
-<iframe width="560" height="315" src="http://www.youtube.com/embed/GU36Z3exP2c" frameborder="0" allowfullscreen></iframe>
+[![node.js 실습](http://img.youtube.com/vi/GU36Z3exP2c/0.jpg)](http://www.youtube.com/watch?v=GU36Z3exP2c)
+
 
 [생활코딩:node.js의 개념](http://opentutorials.org/course/86/651)
-<iframe width="560" height="315" src="http://www.youtube.com/embed/EcFLbFTcWFg" frameborder="0" allowfullscreen></iframe>
+[![node.js의 개념](http://img.youtube.com/vi/EcFLbFTcWFg/0.jpg)](http://www.youtube.com/watch?v=EcFLbFTcWFg)

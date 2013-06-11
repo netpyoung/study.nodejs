@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <script src='/socket.io/socket.io.js'></script>
+    <script>
+      window.onload = function() {
+
+      var socket = io.connect();
+
+      socket.on('smart', function (data) {
+      alert(data);
+      });
+
+      document.getElementById('button').onclick = function () {
+      var text = document.getElementById('text').value;
+      socket.emit('rint', text);
+      };
+      };
+    </script>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <input type='text' id='text' />
+    <input type='button' id='button' value='echo' />
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta charset='utf8'>
+    <script src='/socket.io/socket.io.js'></script>
+    <script src='http://code.jquery.com/jquery-1.7.1.min.js'></script>
+    <script>
+      $(document).ready(function () {
+        var socket = io.connect();
+        socket.on('message', function (data) {
+          var output = '';
+          output += '<li>';
+  	  output += '  <h3>' + data.name + '</h3>'
+    	  output += '  <p>' + data.message + '</p>'
+	  output += '  <p>' + data.date + '</p>'
+	  output += '</li>';
+
+	  $(output).prependTo('#content');
+	});
+
+        $('button').click(function () {
+          socket.emit('message', {
+             name:    $('#name').val(),
+             message: $('#message').val(),
+             date:    new Date().toUTCString()
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Hello world</h1>
+    <hr />
+    <input id='name' />
+    <input id='message' />
+    <button>Button</button>
+    <ul id='content' />
+  </body>
+</html>

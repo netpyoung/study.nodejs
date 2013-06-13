@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <script type='text/javascript' src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src='/socket.io/socket.io.js'></script>
+    <script>
+    var socket = io.connect();
+
+    function on_btn_click() {
+      var user_name = $('#user_name').val();
+      socket.emit('q-login', user_name);
+    }
+
+    function on_load() {
+      var room = prompt('room : ', '123');
+
+      socket.emit('join', room);
+
+      socket.on('message', function (data) {
+	$('<p>' + data + '</p>').appendTo('body');
+      });
+
+      // register event
+      $("button").click(on_btn_click);
+    };
+
+    $(document).ready(test2);
+    </script>
+  </head>
+  <body>
+    <h1>LOGIN</h1>
+    <input id='user_name' />
+    <button id='button'>Login</button>
+  </body>
+</html>

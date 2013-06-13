@@ -2,7 +2,7 @@
     "name": "test-socket.io",
     "dependencies": {
         "express": "*",
-	"consolidate": "*",
-	"hogan.js": "*"
+        "consolidate": "*",
+        "hogan.js": "*"
     }
 }

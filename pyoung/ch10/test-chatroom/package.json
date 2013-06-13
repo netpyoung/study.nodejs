@@ -1,5 +1,5 @@
 {
-    "name": "test-socket.io",
+    "name": "test-chatroom",
     "dependencies": {
         "express": "*",
         "socket.io": "*"

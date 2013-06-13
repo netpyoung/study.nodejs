@@ -19,27 +19,6 @@ function send_file(res, page_name) {
     res.sendfile(conf.page_dir + '/' + page_name);
 }
 
-// /hello
-app.get('/hello', function (req, res) {
-    send_file(res, 'hello.html');
-});
-
-// /test1
-app.get('/test1', function (req, res) {
-    send_file(res, 'test1.html');
-});
-
-function on_test1 (socket) {
-    socket.emit('news', { hello: 'world' });
-    socket.on('my other event', function (data) {
-        console.log(data);
-    });
-}
-
-
-io.of('/test1').on('connection', on_test1);
-//io.sockets.on('connection', on_test1);
-
 // /test2
 // q- : request, s- response
 app.get('/test2', function (req, res) {
@@ -47,13 +26,13 @@ app.get('/test2', function (req, res) {
 });
 
 function on_test2 (socket) {
-    // req set-name
+    // q-get-name
     socket.on('q-set-name', function (data) {
         console.log('!!!q-set-name:', data);
         socket.set('name', data);
     });
 
-    // req get-name
+    // q-set-name
     socket.on('q-get-name', function () {
         console.log('!!!q-get-name');
 
@@ -67,3 +46,19 @@ io.of('/test2').on('connection', on_test2);
 
 // main
 server.listen(conf.port);
+
+
+
+
+io.sockets.on('connection', function (socket) {
+    socket.on('join', function (data) {
+	socket.join(data); // 방에 들어가고,
+	socket.set('room', data);
+    });
+
+    socket.on('message', function (data) {
+	socket.get('room', function (err, room) {
+	    io.sockets.in(room).emit('message', data); // 방에 들어가 있는 놈들에게 호출
+	});
+    });
+});

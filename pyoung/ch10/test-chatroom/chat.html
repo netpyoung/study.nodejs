@@ -4,7 +4,7 @@
     <script src='/socket.io/socket.io.js'></script>
     <script src='http://code.jquery.com/jquery-1.7.1.min.js'></script>
     <script>
-      window.onload = function() {
+    window.onload = function() {
 
       var socket = io.connect();
 
@@ -13,14 +13,14 @@
       socket.emit('join', room);
 
       socket.on('message', function (data) {
-	      $('<p>' + data + '</p>').appendTo('body');
+	$('<p>' + data + '</p>').appendTo('body');
       });
 
       document.getElementById('button').onclick = function () {
- 	     socket.emit('message', 'socket.io room message');
+ 	socket.emit('message', 'socket.io room message');
       };
 
-      };
+    };
     </script>
   </head>
   <body>

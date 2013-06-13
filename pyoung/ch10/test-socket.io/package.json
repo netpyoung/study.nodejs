@@ -1,0 +1,7 @@
+{
+    "name": "test-socket.io",
+    "dependencies": {
+        "express": "*",
+	"socket.io": "*"
+    }
+}

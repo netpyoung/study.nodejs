@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <script type='text/javascript' src='/socket.io/socket.io.js'></script>
+    <script type='text/javascript'>
+    function test1 () {
+      var socket = io.connect('http://localhost/test1');
+      socket.on('news', function (data) {
+        console.log(data);
+        socket.emit('my other event', { my: 'data' });
+      });
+    }
+
+    window.onload = test1;
+    </script>
+  </head>
+</html>

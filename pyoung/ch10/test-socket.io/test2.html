@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script type='text/javascript' src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type='text/javascript' src='/socket.io/socket.io.js'></script>
+    <script type='text/javascript'>
+
+    function test2 () {
+
+      var socket = io.connect('http://localhost/test2');
+
+      var name = prompt('name :', 'Your Name');
+
+      // req set-name
+      socket.emit('q-set-name', name);
+
+      // req get-name
+      $("button").click(function () {
+        socket.emit('q-get-name');
+      });
+
+      // res get-name
+      socket.on('s-get-name', function (data) {
+        console.log(data);
+      });
+    }
+
+    $(document).ready(test2);
+    </script>
+  </head>
+  <body>
+    <button> Click </button>
+  </body>
+</html>

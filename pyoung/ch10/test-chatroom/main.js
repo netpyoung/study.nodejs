@@ -20,12 +20,12 @@ var conf = {
 // db
 var g_db = [
     {
-	username: 'nodejs',
-	password: '123'
+        username: 'nodejs',
+        password: '123'
     },
     {
-	username: 'underscore',
-	password: '123'
+        username: 'underscore',
+        password: '123'
     }
 ]
 
@@ -86,12 +86,12 @@ app.post('/login', function (req, res) {
     var password = req.body.password;
 
     if (has_userinfo(username, password)) {
-	res.cookie('username', username);
-	res.cookie('auth', 'true');
-	res.redirect('/chat');
+        res.cookie('username', username);
+        res.cookie('auth', 'true');
+        res.redirect('/chat');
     }
     else {
-	res.redirect('/fail');
+        res.redirect('/fail');
     }
 });
 
@@ -105,18 +105,18 @@ app.get('/chat', function (req, res) {
     var has_auth = _.isEqual(req.cookies.auth, 'true');
 
     if (has_auth) {
-	var username = req.cookies.username;
-	res.render('chat', { username: username });
+        var username = req.cookies.username;
+        res.render('chat', { username: username });
     }
     else {
-	res.redirect('/fail');
+        res.redirect('/fail');
     }
 });
 
 var ns_chat = io.of('/chat');
 ns_chat.on('connection', function(socket) {
     socket.on('req-message', function (obj) {
-	ns_chat.emit('res-message', obj);
+        ns_chat.emit('res-message', obj);
     });
 });
 

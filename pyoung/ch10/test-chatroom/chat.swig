@@ -2,7 +2,7 @@
   <head>
     <meta charset='utf8'>
     <script src='/socket.io/socket.io.js'></script>
-	<script src='./jquery-1.10.1.min.js'></script>
+    <script src='./jquery-1.10.1.min.js'></script>
     <script src='./jquery.cookie.min.js'></script>
     <script>
     function on_ready() {

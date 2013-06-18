@@ -1,7 +1,0 @@
-{
-    "name": "test-chatroom",
-    "dependencies": {
-        "express": "*",
-        "socket.io": "*"
-    }
-}
